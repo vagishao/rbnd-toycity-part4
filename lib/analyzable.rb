@@ -44,20 +44,20 @@ module Analyzable
 
   def self.print_report(products)
     avg_price = average_price(products)
-    report =  "Average price: #{avg_price}"
+    report =  "Average price: #{avg_price}    \n"
 
 
-    puts 'Inventory by Brand:'
+    report+= "Inventory by Brand:\n"
     hash = count_by_brand(products)
     hash.each do |brand,count|
-      report+= " #{brand}: #{count}".rjust(6)
+      report+= "- #{brand}: #{count}\n".rjust(6)
     end
 
 
-    puts 'Inventory by Name:'
+    report+= "Inventory by Name:\n"
     hash = count_by_name(products)
     hash.each do |brand,count|
-      report +=" #{brand}: #{count}".rjust(6)
+      report +="- #{brand}: #{count}\n".rjust(6)
     end
 
     report
