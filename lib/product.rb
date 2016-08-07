@@ -2,6 +2,8 @@ require_relative 'udacidata'
 
 class Product < Udacidata
   attr_reader :id, :price, :brand, :name
+  create_finder_methods("brand", "name")
+
 
   def initialize(opts={})
 

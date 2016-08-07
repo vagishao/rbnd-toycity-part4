@@ -5,7 +5,6 @@ require 'csv'
 class Udacidata
 
   @@csv_path = File.dirname(__FILE__) + "/../data/data.csv"
-  create_finder_methods("brand", "name")
 
   def self.create(attributes = nil)
     # If the object's data is already in the database
